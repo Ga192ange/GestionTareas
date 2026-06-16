@@ -76,24 +76,24 @@ Pendiente de despliegue en Vercel.
 
 ### Login
 
-![Login](capturas/iniciosesion.png)
+![Login](capturas/iniciosesion.PNG)
 
 ### Registro
 
-![Registro](capturas/registro.png)
+![Registro](capturas/registro.PNG)
 
 ### Dashboard
 
-![Dashboard](capturas/dashboard.png)
+![Dashboard](capturas/dashboard.PNG)
 
 ### Proyectos
 
-![Proyectos](capturas/proyectos.png)
+![Proyectos](capturas/proyectos.PNG)
 
 ### Tareas
 
-![Tareas](capturas/tareas.png)
+![Tareas](capturas/tareas.PNG)
 
 ### Usuarios
 
-![Usuarios](capturas/usuarios.png)
+![Usuarios](capturas/usuarios.PNG)
