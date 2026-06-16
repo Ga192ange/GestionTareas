@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<a href="/dashboard">
+    <button type="button" class="btn-volver">
+        ← Volver
+    </button>
+</a>
+
+<h1>Usuarios Registrados</h1>
+
+{% for usuario in usuarios %}
+
+<div class="item">
+
+<h3>{{ usuario.nombre }}</h3>
+
+<p><strong>Correo:</strong> {{ usuario.correo }}</p>
+
+<p><strong>Rol:</strong> {{ usuario.rol }}</p>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</body>
+</html>

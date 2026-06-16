@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Gestión de Tareas</h1>
+
+    <p class="subtitulo">
+        Sistema colaborativo para la gestión de proyectos, asignación de tareas y control de actividades.
+    </p>
+
+    <div class="menu">
+
+        <a href="/proyectos">
+            <button>Proyectos</button>
+        </a>
+
+        <a href="/tareas">
+            <button>Tareas</button>
+        </a>
+
+        <a href="/usuarios">
+            <button>Usuarios</button>
+        </a>
+
+        <a href="/cerrar-sesion">
+            <button class="btn-cerrar">
+                Cerrar Sesión
+            </button>
+        </a>
+
+    </div>
+
+    <!-- PROYECTOS -->
+
+    <div class="item">
+
+        <h2 style="text-align:center; margin-bottom:10px;">
+            Gestión de Proyectos
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>{{ total_proyectos }}</h2>
+                <p>Proyectos Totales</p>
+            </div>
+
+            <div class="card">
+                <h2>{{ activos }}</h2>
+                <p>Activos</p>
+            </div>
+
+            <div class="card">
+                <h2>{{ finalizados }}</h2>
+                <p>Finalizados</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TAREAS -->
+
+    <div class="item">
+
+        <h2 style="text-align:center; margin-bottom:20px;">
+            Gestión de Tareas
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>{{ total_tareas }}</h2>
+                <p>Tareas Totales</p>
+            </div>
+
+            <div class="card">
+                <h2>{{ pendientes }}</h2>
+                <p>Pendientes</p>
+            </div>
+
+            <div class="card">
+                <h2>{{ progreso }}</h2>
+                <p>En Progreso</p>
+            </div>
+
+            <div class="card">
+                <h2>{{ completadas }}</h2>
+                <p>Completadas</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

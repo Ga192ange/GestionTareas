@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tareas</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<a href="/dashboard">
+    <button type="button" class="btn-volver">
+        ← Volver
+    </button>
+</a>
+
+<h1>Lista de Tareas</h1>
+
+
+<a href="/nueva-tarea">
+    <button>Nueva Tarea</button>
+</a>
+
+<form method="GET">
+
+    <select name="estado">
+
+        <option value="">Todos</option>
+
+        <option value="Pendiente">Pendiente</option>
+
+        <option value="En Progreso">En Progreso</option>
+
+        <option value="Completada">Completada</option>
+
+    </select>
+
+    <button type="submit">
+        Filtrar
+    </button>
+
+</form>
+
+
+{% for tarea in tareas %}
+<div class="item">
+
+<h3>{{ tarea.titulo }}</h3>
+
+<p>Descripción: {{ tarea.descripcion }}</p>
+
+<p>Estado: {{ tarea.estado }}</p>
+
+<p>Prioridad: {{ tarea.prioridad }}</p>
+
+<p>Usuario: {{ tarea.usuario }}</p>
+
+<p>Proyecto: {{ tarea.proyecto }}</p>
+
+<p>Fecha límite: {{ tarea.fecha_limite }}</p>
+
+<a href="/editar-tarea/{{ tarea.id }}">
+    <button>Editar</button>
+</a>
+
+<a href="/eliminar-tarea/{{ tarea.id }}">
+    <button>Eliminar</button>
+</a>
+
+
+</div>
+{% endfor %}
+
+</body>
+</html>

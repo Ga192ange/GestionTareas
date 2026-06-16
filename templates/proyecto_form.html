@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Proyecto</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+
+<a href="/proyectos">
+    <button type="button" class="btn-volver">
+        ← Volver
+    </button>
+</a>
+
+<h1>Nuevo Proyecto</h1>
+
+<form method="POST">
+
+    <input
+        type="text"
+        name="nombre"
+        placeholder="Nombre del proyecto"
+        required
+    >
+
+    <textarea
+        name="descripcion"
+        placeholder="Descripción"
+        required
+    ></textarea>
+
+    <select name="estado">
+        <option value="Activo">Activo</option>
+        <option value="Finalizado">Finalizado</option>
+    </select>
+
+    <button type="submit">
+        Guardar Proyecto
+    </button>
+
+</form>
+
+</div>
+
+</body>
+</html>

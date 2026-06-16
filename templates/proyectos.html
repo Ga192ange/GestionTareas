@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyectos</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<a href="/dashboard">
+    <button type="button" class="btn-volver">
+        ← Volver
+    </button>
+</a>
+
+<h1>Lista de Proyectos</h1>
+
+
+
+<a href="/nuevo-proyecto">
+    <button>Nuevo Proyecto</button>
+</a>
+
+
+
+{% for proyecto in proyectos %}
+<div class="item">
+
+<h3>{{ proyecto.nombre }}</h3>
+
+<p>Descripción: {{ proyecto.descripcion }}</p>
+
+<p>Estado: {{ proyecto.estado }}</p>
+
+<a href="/editar-proyecto/{{ proyecto.id }}">
+    <button>Editar</button>
+</a>
+
+<a href="/eliminar-proyecto/{{ proyecto.id }}">
+    <button>Eliminar</button>
+</a>
+
+
+</div>
+{% endfor %}
+
+</body>
+</html>
